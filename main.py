@@ -34,7 +34,7 @@ def get_top50_servers():
     for row in results:
         ip = row.find(class_="ip")
         port = row.find(class_="port")
-        if ip:
+        if ip and port:
             ip = ip.text.strip()
             port = port.text.strip()
             servers.append(ip + port)
